@@ -23,8 +23,8 @@ def parse_answers(answers_data)
 end
 
 def run
+  questions = parse_data(File.read(DATA_FILE))
   while true
-    questions = parse_data(File.read(DATA_FILE))
     if questions.empty?
       puts "Congratulation: no more questions to ask"
       exit
